@@ -3,6 +3,7 @@ package com.proyect.itsjsexto.smartm_proyect;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -160,21 +161,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {                           //VALIDAR CONTRASEÑA
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
-            cancel = true;
+            //cancel = true;
         }
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {                                                             //Validar email
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
+            //cancel = true;
+        } else if (!isEmailValid(email)) {                                                          //Email limpio
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
-            cancel = true;
+            //cancel = true;
         }
 
         if (cancel) {
@@ -184,9 +185,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+            //showProgress(true);
+            //mAuthTask = new UserLoginTask(email, password);
+            //mAuthTask.execute((Void) null);
+            Intent i;
+            i = new Intent(this, pantallaConMenu.class);
+            startActivity(i);
+
         }
     }
 
@@ -348,7 +353,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     //Onclic para abrir activity
+    public void abrirActiviti(View view) {
 
+        Intent i;
+
+        switch (view.getId()) {
+            case R.id.email_sign_in_button:
+                i = new Intent(this, pantallaConMenu.class);
+                startActivity(i);
+                break;
+            case R.id.create_boton:
+                i = new Intent(this, pantallaConMenu.class);
+                startActivity(i);
+                break;
+        }
+
+    }
 
 }
 
