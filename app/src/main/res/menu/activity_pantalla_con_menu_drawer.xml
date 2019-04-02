@@ -7,7 +7,8 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@android:drawable/presence_online"
-            android:title="Moto1" />
+            android:title="Moto1"
+            android:visible="true" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@android:drawable/presence_online"
