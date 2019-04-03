@@ -19,7 +19,7 @@
             android:title="@string/nuevaMoto" />
     </group>
 
-    <item android:title="Comunicacion">
+    <item android:title="@string/comunicacion">
         <menu>
             <item
                 android:id="@+id/nav_share"
