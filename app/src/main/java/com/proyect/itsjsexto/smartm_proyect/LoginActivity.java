@@ -363,7 +363,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 startActivity(i);
                 break;
             case R.id.create_boton:
-                i = new Intent(this, pantallaConMenu.class);
+                i = new Intent(this, pantallaRegistroUsuario.class);
                 startActivity(i);
                 break;
         }
