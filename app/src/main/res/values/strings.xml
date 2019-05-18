@@ -26,5 +26,13 @@
     <string name="compartir">Compartir</string>
     <string name="enviar">Enviar</string>
     <string name="comunicacion">Comunicación</string>
+    <!--
+        Cadenas
+    -->
+    <string name="llantas_uno">Precion de las llantas</string>
+    <string name="llantas_dos">Llanta delantera</string>
+    <string name="llantas_tres">Llanta trasera</string>
+    <string name="desc_llantas">Estado de las llantas</string>
+
 
 </resources>
