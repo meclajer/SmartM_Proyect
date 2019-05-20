@@ -33,6 +33,9 @@
     <string name="llantas_dos">Llanta delantera</string>
     <string name="llantas_tres">Llanta trasera</string>
     <string name="desc_llantas">Estado de las llantas</string>
+    <string name="localizacionTXT">Localizacion Actual</string>
+    <string name="calendarioTitulo">Calendario de Reparaciones</string>
+    <string name="titulo_lista">Lista de chequeo</string>
 
 
 </resources>

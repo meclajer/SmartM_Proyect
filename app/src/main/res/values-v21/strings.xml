@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="desc_llantas">Estado de las llantas</string>
+    <string name="localizacionTXT">Localizacion Actual</string>
+    <string name="calendarioTitulo">Calendario de Reparaciones</string>
+    <string name="titulo_lista">Lista de chequeo</string>
 </resources>
