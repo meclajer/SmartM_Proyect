@@ -1,3 +1,5 @@
+package com.proyect.itsjsexto.smartm_proyect;
+
 import android.arch.persistence.room.Database;
 
 import com.proyect.itsjsexto.smartm_proyect.DaoAcces;
