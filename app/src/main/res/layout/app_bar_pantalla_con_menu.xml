@@ -238,27 +238,42 @@
                 app:cardElevation="10dp"
                 app:contentPadding="@dimen/Cardview_compat_inset_shadow">
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/textViewTituloLista"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/titulo_lista"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:orientation="vertical">
 
-                    <ListView
-                        android:id="@+id/listviweChequeo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/textViewTituloLista"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/titulo_lista"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ListView
+                            android:id="@+id/listaChequeoF"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                        </ListView>
+
+                        <ListView
+                            android:id="@+id/listaaaa"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </ScrollView>
+
             </android.support.v7.widget.CardView>
 
         </LinearLayout>

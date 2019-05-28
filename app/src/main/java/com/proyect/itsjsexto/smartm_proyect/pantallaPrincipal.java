@@ -1,9 +1,10 @@
 package com.proyect.itsjsexto.smartm_proyect;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -12,6 +13,8 @@ import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.ArrayList;
 
 
 public class pantallaPrincipal extends AppCompatActivity
@@ -22,7 +25,7 @@ public class pantallaPrincipal extends AppCompatActivity
 
     //
     ListView lista;
-    String[] valLista = new String[] {"Checar llantas","Alineacion","Amortiguadores"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +39,23 @@ public class pantallaPrincipal extends AppCompatActivity
         map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
         //Lista
-        lista = (ListView) findViewById(R.id.listviweChequeo);
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,valLista);
+        lista = (ListView) findViewById(R.id.listaChequeoF);
+
+        ArrayList<String> valLista = new ArrayList<>();
+        valLista.add("Checar llantas");
+        valLista.add("Checar suspencion");
+        valLista.add("Cambiar llantas");
+
+        String[] valores = {"uno", "2"};
+
+        ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valores);
+
+        ListView lista2 = (ListView) findViewById(R.id.listaaaa);
+        lista2.setAdapter(adaptador);
 
         lista.setAdapter(adaptador);
+
+
 
     }
 
