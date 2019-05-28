@@ -1,13 +1,9 @@
 package com.proyect.itsjsexto.smartm_proyect;
 
 import android.arch.persistence.room.Database;
-
-import com.proyect.itsjsexto.smartm_proyect.DaoAcces;
-import com.proyect.itsjsexto.smartm_proyect.DatosMoto;
-import com.proyect.itsjsexto.smartm_proyect.Moto;
-import com.proyect.itsjsexto.smartm_proyect.Usuario;
+import android.arch.persistence.room.RoomDatabase;
 
 @Database(entities = {Usuario.class, Moto.class, DatosMoto.class}, version = 1, exportSchema = false)
-public abstract class BaseDatos {
+public abstract class BaseDatos extends RoomDatabase {
     public abstract DaoAcces daoAccess() ;
 }

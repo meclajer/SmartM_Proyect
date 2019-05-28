@@ -17,21 +17,24 @@ public class Usuario {
     private String nombre;
 
     @NonNull
-    private String pAp;
+    private String primerAp;
 
     @NonNull
-    private String sAP;
+    private String segundoAP;
 
     //constructor
-    public Usuario(@NonNull String correo, @NonNull String contraseña, @NonNull String nombre, @NonNull String pAp, @NonNull String sAP) {
+
+
+    public Usuario(@NonNull String correo, @NonNull String contraseña, @NonNull String nombre, @NonNull String primerAp, @NonNull String segundoAP) {
         this.correo = correo;
         this.contraseña = contraseña;
         this.nombre = nombre;
-        this.pAp = pAp;
-        this.sAP = sAP;
+        this.primerAp = primerAp;
+        this.segundoAP = segundoAP;
     }
 
     //get and set
+
     @NonNull
     public String getCorreo() {
         return correo;
@@ -60,20 +63,20 @@ public class Usuario {
     }
 
     @NonNull
-    public String getpAp() {
-        return pAp;
+    public String getPrimerAp() {
+        return primerAp;
     }
 
-    public void setpAp(@NonNull String pAp) {
-        this.pAp = pAp;
+    public void setPrimerAp(@NonNull String primerAp) {
+        this.primerAp = primerAp;
     }
 
     @NonNull
-    public String getsAP() {
-        return sAP;
+    public String getSegundoAP() {
+        return segundoAP;
     }
 
-    public void setsAP(@NonNull String sAP) {
-        this.sAP = sAP;
+    public void setSegundoAP(@NonNull String segundoAP) {
+        this.segundoAP = segundoAP;
     }
 }
