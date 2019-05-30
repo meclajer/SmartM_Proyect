@@ -46,9 +46,7 @@ public class pantallaPrincipal extends AppCompatActivity
         valLista.add("Checar suspencion");
         valLista.add("Cambiar llantas");
 
-        String[] valores = {"uno", "2"};
-
-        ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valores);
+        ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valLista);
 
         lista.setAdapter(adaptador);
 
