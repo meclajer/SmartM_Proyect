@@ -50,9 +50,6 @@ public class pantallaPrincipal extends AppCompatActivity
 
         ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valores);
 
-        ListView lista2 = (ListView) findViewById(R.id.listaaaa);
-        lista2.setAdapter(adaptador);
-
         lista.setAdapter(adaptador);
 
 
