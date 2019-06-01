@@ -1,5 +1,6 @@
 package com.proyect.itsjsexto.smartm_proyect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -79,12 +80,14 @@ public class pantallaConMenu extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        Intent i;
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
+            i = new Intent(this, pantallaRegistroMoto.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_share) {
 

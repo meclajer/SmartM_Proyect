@@ -39,6 +39,8 @@
             android:label="@string/title_activity_pantalla_con_menu"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".pantallaRegistroUsuario"></activity>
+        <activity android:name=".pantallaRegistroMoto"></activity>
+        <activity android:name=".pantallaNota"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
