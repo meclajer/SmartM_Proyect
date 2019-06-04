@@ -9,7 +9,8 @@ public class DatosMoto {
 
     @PrimaryKey
     @NonNull
-    //Debe ser foranea no se como
+    private int id;
+
     private String numSer;
 
     @NonNull
@@ -22,24 +23,37 @@ public class DatosMoto {
     private String presion;
 
     @NonNull
+    private String presion2;
+
+    @NonNull
     private String temperatura;
 
-    public DatosMoto( @NonNull String numSer, @NonNull String latitud, @NonNull String longitud, @NonNull String presion, @NonNull String temperatura) {
+    private String nota;
 
+    public DatosMoto(int id, String numSer, @NonNull String latitud, @NonNull String longitud, @NonNull String presion, @NonNull String presion2, @NonNull String temperatura, String nota) {
+        this.id = id;
         this.numSer = numSer;
         this.latitud = latitud;
         this.longitud = longitud;
         this.presion = presion;
+        this.presion2 = presion2;
         this.temperatura = temperatura;
+        this.nota = nota;
     }
 
+    public int getId() {
+        return id;
+    }
 
-    @NonNull
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNumSer() {
         return numSer;
     }
 
-    public void setNumSer(@NonNull String numSer) {
+    public void setNumSer(String numSer) {
         this.numSer = numSer;
     }
 
@@ -71,11 +85,28 @@ public class DatosMoto {
     }
 
     @NonNull
+    public String getPresion2() {
+        return presion2;
+    }
+
+    public void setPresion2(@NonNull String presion2) {
+        this.presion2 = presion2;
+    }
+
+    @NonNull
     public String getTemperatura() {
         return temperatura;
     }
 
     public void setTemperatura(@NonNull String temperatura) {
         this.temperatura = temperatura;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
     }
 }

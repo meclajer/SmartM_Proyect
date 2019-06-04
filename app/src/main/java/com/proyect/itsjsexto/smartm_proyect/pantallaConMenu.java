@@ -17,6 +17,8 @@ import android.view.MenuItem;
 public class pantallaConMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    //Intent ifab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +30,11 @@ public class pantallaConMenu extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                abrirActiviti(view);
+                //Intent ifab = new Intent //(, pantallaNota.class);
+                //startActivity(ifab);
+
             }
         });
 
@@ -83,8 +88,9 @@ public class pantallaConMenu extends AppCompatActivity
         Intent i;
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.fab) {
+            i = new Intent(this, pantallaNota.class);
+            startActivity(i);
         } else if (id == R.id.nav_manage) {
             i = new Intent(this, pantallaRegistroMoto.class);
             startActivity(i);
@@ -99,4 +105,18 @@ public class pantallaConMenu extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void abrirActiviti(View view) {
+
+        Intent i;
+
+        switch (view.getId()) {
+            case R.id.fab:
+                i = new Intent(this, pantallaNota.class);
+                startActivity(i);
+                break;
+        }
+
+    }
+
 }

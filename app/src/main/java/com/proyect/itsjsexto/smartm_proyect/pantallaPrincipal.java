@@ -39,16 +39,16 @@ public class pantallaPrincipal extends AppCompatActivity
         map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
         //Lista
-        lista = (ListView) findViewById(R.id.listaChequeoF);
+        //lista = (ListView) findViewById(R.id.listaChequeoF);
 
         ArrayList<String> valLista = new ArrayList<>();
         valLista.add("Checar llantas");
         valLista.add("Checar suspencion");
         valLista.add("Cambiar llantas");
 
-        ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valLista);
+        //ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,valLista);
 
-        lista.setAdapter(adaptador);
+        //lista.setAdapter(adaptador);
 
 
 
